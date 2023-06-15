@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <H1>Sistema de verificação de Nacionalidade </H1>
+    Nacionalidade: <input type="text" name="txnac" id="txnac">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function checar() {
+            var txnac = window.document.querySelector('input#txnac')
+            var res = window.document.querySelector('div#res')
+            var nac = Number (txnac.value) // AINDA NAO DEU CERTO VERIFICAR O ERRO CORRIGIR E APAGAR ESSA MENSAGEM
+            if (nac == 'Brasil'){
+                res.innerHTML += `<p>Sua nacionalidade é Brasileiro</p>`
+        } else {
+                res.innerHTML += `<p>Sua nacionalidade é Estrangeiro</p>`
+
+        }
+        }
+    </script>
+</body>
+</html>
